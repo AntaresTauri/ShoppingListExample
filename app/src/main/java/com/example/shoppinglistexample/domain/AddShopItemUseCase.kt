@@ -1,9 +1,9 @@
 package com.example.shoppinglistexample.domain
 
 // Добавляет элемент в список
-class AddShopItemUseCase {
+class AddShopItemUseCase(private val shopListRepository: ShopListRepository) {
 
     fun addShopItem(shopItem: ShopItem) {
-        TODO()
+        shopListRepository.addShopItem(shopItem)
     }
 }

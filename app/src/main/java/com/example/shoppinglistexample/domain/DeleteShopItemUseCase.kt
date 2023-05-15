@@ -1,9 +1,9 @@
 package com.example.shoppinglistexample.domain
 
 // Удаляет элемент из списка
-class DeleteShopItemUseCase {
+class DeleteShopItemUseCase(private val shopListRepository: ShopListRepository) {
 
     fun deleteShopItem(shopItem: ShopItem) {
-        TODO()
+        shopListRepository.deleteShopItem(shopItem)
     }
 }

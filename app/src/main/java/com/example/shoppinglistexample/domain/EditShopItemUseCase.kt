@@ -1,9 +1,9 @@
 package com.example.shoppinglistexample.domain
 
-// Редактировать элемент списка
-class EditShopItemUseCase {
+// Редактирует элемент списка
+class EditShopItemUseCase(private val shopListRepository: ShopListRepository) {
 
     fun editShopItem(shopItem: ShopItem) {
-        TODO()
+        shopListRepository.editShopItem(shopItem)
     }
 }

@@ -1,9 +1,9 @@
 package com.example.shoppinglistexample.domain
 
-// Получаем элемент из списка
-class GetShopItemUseCase {
+// Получает элемент из списка
+class GetShopItemUseCase(private val shopListRepository: ShopListRepository) {
 
-    fun getShopItem(shopItem: Int): ShopItem {
-        TODO()
+    fun getShopItem(shopItemId: Int): ShopItem {
+        return shopListRepository.getShopItem(shopItemId)
     }
 }

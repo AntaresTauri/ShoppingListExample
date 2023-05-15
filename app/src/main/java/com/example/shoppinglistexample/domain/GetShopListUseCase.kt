@@ -1,9 +1,11 @@
 package com.example.shoppinglistexample.domain
 
-// Получает весь список элементов
-class GetShopListUseCase {
+import androidx.lifecycle.LiveData
 
-    fun getShopList(): List<ShopItem> {
-        TODO()
+// Получает весь список элементов
+class GetShopListUseCase(private val shopListRepository: ShopListRepository) {
+
+    fun getShopList(): LiveData<List<ShopItem>> {
+        return shopListRepository.getShopList()
     }
 }
